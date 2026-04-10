@@ -7,6 +7,10 @@
 <meta name="description" content="Elite 1-on-1 personal training and Taekwondo coaching by Irish Humang-it.">
 <meta property="og:title" content="iFitness — Irish Humang-it Personal Training">
 <meta property="og:type" content="website">
+<meta property="og:description" content="Elite personal training & Taekwondo coaching by Irish Humang-it. Certified Gold's Gym Trainer. Black Belt Instructor.">
+<meta property="og:image" content="https://axlbot55-wq.github.io/ifitness-web/assets/irish-coach.jpg">
+<meta property="og:url" content="https://axlbot55-wq.github.io/ifitness-web/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -146,6 +150,42 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.5r
 .foot-logo{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800;color:var(--accent)}.foot-logo span{color:var(--white)}
 .foot-copy{font-size:.68rem;color:var(--muted);font-weight:300}
 .whatsapp-fab{position:fixed;bottom:2rem;right:2rem;z-index:500;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;cursor:pointer;box-shadow:0 4px 24px rgba(37,211,102,.4);border:none;transition:all .3s;text-decoration:none;color:white}.whatsapp-fab:hover{transform:scale(1.1);box-shadow:0 6px 32px rgba(37,211,102,.55)}
+
+/* CHATBOT */
+#chat-fab{position:fixed;bottom:6rem;right:2rem;z-index:501;width:54px;height:54px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 24px rgba(200,168,75,.4);border:none;transition:all .3s;font-size:1.3rem}
+#chat-fab:hover{transform:scale(1.1);box-shadow:0 6px 32px rgba(200,168,75,.55)}
+#chat-fab .fab-close{display:none}
+#chat-fab.open .fab-icon{display:none}
+#chat-fab.open .fab-close{display:block}
+#chat-fab.open{background:var(--card)}
+#chatbox{position:fixed;bottom:9.5rem;right:2rem;z-index:500;width:350px;max-width:calc(100vw - 2rem);background:var(--card);border:1px solid rgba(200,168,75,.2);border-radius:var(--rl);overflow:hidden;box-shadow:0 16px 64px rgba(0,0,0,.7);transform:translateY(14px) scale(.97);opacity:0;pointer-events:none;transition:transform .28s ease,opacity .28s ease}
+#chatbox.open{transform:translateY(0) scale(1);opacity:1;pointer-events:all}
+.cb-header{background:linear-gradient(135deg,rgba(200,168,75,.15),var(--card));padding:1rem 1.3rem;display:flex;align-items:center;gap:.8rem;border-bottom:1px solid var(--border)}
+.cb-avatar{width:34px;height:34px;background:rgba(200,168,75,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.cb-head-info strong{display:block;font-size:.8rem;font-weight:700;color:var(--white)}
+.cb-head-info span{font-size:.6rem;color:var(--muted);font-weight:400}
+.cb-body{padding:1rem;max-height:320px;overflow-y:auto;display:flex;flex-direction:column;gap:.65rem}
+.cb-msg{background:var(--surface);border-radius:4px 12px 12px 4px;padding:.72rem .95rem;font-size:.78rem;color:var(--text);line-height:1.6;font-weight:300;max-width:92%;white-space:pre-line}
+.cb-msg.user-msg{background:rgba(200,168,75,.12);border:1px solid rgba(200,168,75,.18);border-radius:12px 4px 4px 12px;align-self:flex-end;color:var(--white)}
+.cb-options{display:flex;flex-direction:column;gap:.45rem;padding:0 1rem 1rem}
+.cb-opt{background:var(--surface);border:1px solid rgba(200,168,75,.18);border-radius:var(--r);padding:.6rem .9rem;font-size:.72rem;font-weight:600;color:var(--text);cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:center;gap:.55rem;font-family:Inter,sans-serif}
+.cb-opt:hover{border-color:var(--accent);color:var(--accent);background:rgba(200,168,75,.06)}
+.cb-opt-icon{font-size:.95rem;flex-shrink:0}
+.cb-input-row{display:flex;gap:.5rem;padding:0 1rem 1rem}
+.cb-input{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);color:var(--white);font-family:Inter,sans-serif;font-size:.78rem;padding:.58rem .8rem;outline:none;transition:border-color .2s}
+.cb-input:focus{border-color:rgba(200,168,75,.4)}
+.cb-send{background:var(--accent);border:none;border-radius:var(--r);padding:0 .85rem;font-size:.95rem;cursor:pointer;transition:background .2s;color:var(--bg)}
+.cb-send:hover{background:var(--accent-lt)}
+
+/* MODALS */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:1000;padding:20px}
+.modal-overlay.active{display:flex}
+.modal-box{background:var(--card);padding:32px;border-radius:var(--rl);width:100%;max-width:480px;border:1px solid rgba(200,168,75,.2);box-shadow:0 16px 64px rgba(0,0,0,.7);position:relative;color:var(--white)}
+.modal-close{position:absolute;top:16px;right:16px;background:transparent;border:none;color:var(--muted);font-size:1.5rem;cursor:pointer;padding:4px}
+.modal-close:hover{color:var(--white)}
+.modal-box h3{margin-bottom:16px;font-size:1.4rem;font-weight:800;color:var(--white)}
+.modal-box p{color:var(--muted);margin-bottom:20px;font-size:.9rem;font-weight:300;line-height:1.6}
+.hidden{display:none}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:translateY(0)}
@@ -510,6 +550,80 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.5r
   <div class="foot-copy">© 2026 iFitness by Irish Humang-it. All rights reserved.</div>
 </footer>
 
+<!-- CHATBOT FAB -->
+<button id="chat-fab" onclick="toggleChat()" aria-label="Chat">
+  <span class="fab-icon">💬</span>
+  <span class="fab-close">✕</span>
+</button>
+
+<!-- CHATBOX -->
+<div id="chatbox">
+  <div class="cb-header">
+    <div class="cb-avatar">💪</div>
+    <div class="cb-head-info">
+      <strong>iFitness</strong>
+      <span>Chat with us</span>
+    </div>
+  </div>
+  <div class="cb-body" id="cbBody">
+    <div class="cb-msg">Hi! 👋 How can I help you today? Choose an option below or type a message.</div>
+  </div>
+  <div class="cb-options" id="cbOptions">
+    <button class="cb-opt" onclick="chatAction('whatsapp')"><span class="cb-opt-icon">💬</span> Chat on WhatsApp</button>
+    <button class="cb-opt" onclick="chatAction('bmi')"><span class="cb-opt-icon">⚖️</span> BMI Assessment</button>
+    <button class="cb-opt" onclick="chatAction('plan')"><span class="cb-opt-icon">📋</span> Free 7-Day Workout Plan</button>
+    <button class="cb-opt" onclick="chatAction('book')"><span class="cb-opt-icon">📅</span> Book a Session</button>
+  </div>
+  <div class="cb-input-row">
+    <input class="cb-input" id="cbInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendChatMsg()">
+    <button class="cb-send" onclick="sendChatMsg()">→</button>
+  </div>
+</div>
+
+<!-- BMI MODAL -->
+<div class="modal-overlay" id="bmiModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeBmiModal()">✕</button>
+    <div id="bmiFormDiv">
+      <h3>⚖️ BMI Assessment</h3>
+      <p>Get a quick read on your Body Mass Index and see where you stand.</p>
+      <div class="cf-group"><label>Height (cm)</label><input type="number" id="bmiHeight" placeholder="e.g. 165" min="100" max="250"></div>
+      <div class="cf-group"><label>Weight (kg)</label><input type="number" id="bmiWeight" placeholder="e.g. 70" min="20" max="300"></div>
+      <button class="cf-submit" onclick="calculateBmi()" style="border-radius:var(--r)">Calculate My BMI</button>
+    </div>
+    <div id="bmiResultDiv" class="hidden" style="text-align:center;padding:20px 0">
+      <div style="font-size:3rem;margin-bottom:8px">🎯</div>
+      <h4 style="font-size:1.5rem;margin-bottom:4px;font-weight:800;color:var(--white)">Your BMI: <span id="bmiVal">0</span></h4>
+      <p id="bmiCategory" style="color:var(--accent);margin-bottom:12px;font-weight:600;font-size:.95rem"></p>
+      <p id="bmiRange" style="color:var(--muted);margin-bottom:16px;font-size:.78rem;font-weight:300"></p>
+      <button onclick="alert('Your detailed BMI guide is being prepared! Irish will reach out soon.');closeBmiModal();" style="background:transparent;color:var(--accent);border:1px solid rgba(200,168,75,.4);border-radius:var(--r);padding:.7rem 1.5rem;font-family:Inter,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">📥 Get Full Results via Email</button>
+    </div>
+  </div>
+</div>
+
+<!-- 7-DAY PLAN MODAL -->
+<div class="modal-overlay" id="freePlanModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeFreePlanModal()">✕</button>
+    <div id="freePlanEmailDiv">
+      <h3>📋 Free 7-Day Home Workout Plan</h3>
+      <p>Enter your email and we'll send you a complete beginner home workout plan. No equipment needed — just 15-20 min/day.</p>
+      <div class="cf-group" style="margin-bottom:.8rem"><label>Your Email</label><input type="email" id="freePlanEmail" placeholder="you@email.com"></div>
+      <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:1rem;font-size:.72rem;color:var(--muted);font-weight:300">
+        <input type="checkbox" id="freePlanDpa" style="margin-top:3px;accent-color:var(--accent)">
+        <label for="freePlanDpa">I agree to receive fitness updates. Unsubscribe anytime. (DPA 2012)</label>
+      </div>
+      <button class="cf-submit" onclick="submitFreePlan()" style="border-radius:var(--r)">Send Me My Free Plan</button>
+    </div>
+    <div id="freePlanResultDiv" class="hidden" style="text-align:center;padding:20px 0">
+      <div style="font-size:2.5rem;margin-bottom:8px">✅</div>
+      <h4 style="font-size:1.3rem;margin-bottom:8px;font-weight:800;color:var(--white)">Your 7-Day Plan is on its way!</h4>
+      <p style="color:var(--muted);margin-bottom:16px;font-size:.82rem;font-weight:300">Check your inbox. No equipment needed!</p>
+      <button onclick="closeFreePlanModal()" style="background:transparent;color:var(--accent);border:1px solid rgba(200,168,75,.4);border-radius:var(--r);padding:.6rem 1.5rem;font-family:Inter,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">Got it, thanks!</button>
+    </div>
+  </div>
+</div>
+
 <a href="https://wa.me/639171234567" target="_blank" class="whatsapp-fab" aria-label="Chat on WhatsApp">💬</a>
 
 <script>
@@ -526,6 +640,76 @@ function prefillForm(program){
   if(sel){
     for(let i=0;i<sel.options.length;i++){if(sel.options[i].text===program){sel.selectedIndex=i;break}}
   }
+}
+
+// Chat toggle
+function toggleChat(){
+  const fab=document.getElementById('chat-fab');
+  const box=document.getElementById('chatbox');
+  fab.classList.toggle('open');
+  box.classList.toggle('open');
+}
+
+// Chat actions
+function chatAction(type){
+  const body=document.getElementById('cbBody');
+  const opts=document.getElementById('cbOptions');
+  let msg='';
+  if(type==='whatsapp'){msg='Opening WhatsApp...';setTimeout(()=>{window.open('https://wa.me/639171234567','_blank')},500)}
+  else if(type==='bmi'){msg='Let me open the BMI calculator...';setTimeout(()=>{openBmiModal();opts.style.display='none'},500)}
+  else if(type==='plan'){msg='Let me get you that free plan...';setTimeout(()=>{openFreePlanModal();opts.style.display='none'},500)}
+  else if(type==='book'){msg='Scrolling to the booking form...';setTimeout(()=>{document.getElementById('contact').scrollIntoView({behavior:'smooth'})},500)}
+  const userDiv=document.createElement('div');userDiv.className='cb-msg user-msg';
+  const btnText={whatsapp:'Chat on WhatsApp',bmi:'BMI Assessment',plan:'Free 7-Day Plan',book:'Book a Session'};
+  userDiv.textContent=btnText[type]||type;
+  body.appendChild(userDiv);
+  const botDiv=document.createElement('div');botDiv.className='cb-msg';botDiv.textContent=msg;
+  body.appendChild(botDiv);
+  body.scrollTop=body.scrollHeight;
+}
+
+function sendChatMsg(){
+  const input=document.getElementById('cbInput');
+  const msg=input.value.trim();if(!msg)return;
+  const body=document.getElementById('cbBody');
+  const userDiv=document.createElement('div');userDiv.className='cb-msg user-msg';userDiv.textContent=msg;
+  body.appendChild(userDiv);
+  input.value='';
+  setTimeout(()=>{
+    const botDiv=document.createElement('div');botDiv.className='cb-msg';botDiv.textContent="Thanks for your message! For faster response, chat with us on WhatsApp or book a session below. 💪";
+    body.appendChild(botDiv);body.scrollTop=body.scrollHeight;
+  },800);
+}
+
+// BMI Modal
+function openBmiModal(){document.getElementById('bmiModal').classList.add('active')}
+function closeBmiModal(){document.getElementById('bmiModal').classList.remove('active');document.getElementById('bmiFormDiv').classList.remove('hidden');document.getElementById('bmiResultDiv').classList.add('hidden')}
+function calculateBmi(){
+  const h=parseFloat(document.getElementById('bmiHeight').value);
+  const w=parseFloat(document.getElementById('bmiWeight').value);
+  if(!h||!w||h<100||w<20){alert('Please enter valid height and weight.');return}
+  const bmi=(w/((h/100)**2)).toFixed(1);
+  let cat='',range='';
+  if(bmi<18.5){cat='Underweight';range='BMI < 18.5 — Consider a nutrition-focused program.'}
+  else if(bmi<25){cat='Normal Weight';range='BMI 18.5–24.9 — Great! Maintain with regular training.'}
+  else if(bmi<30){cat='Overweight';range='BMI 25–29.9 — A structured PT program can help.'}
+  else{cat='Obese';range='BMI 30+ — Personal training with medical clearance recommended.'}
+  document.getElementById('bmiVal').textContent=bmi;
+  document.getElementById('bmiCategory').textContent=cat;
+  document.getElementById('bmiRange').textContent=range;
+  document.getElementById('bmiFormDiv').classList.add('hidden');
+  document.getElementById('bmiResultDiv').classList.remove('hidden');
+}
+
+// Free Plan Modal
+function openFreePlanModal(){document.getElementById('freePlanModal').classList.add('active')}
+function closeFreePlanModal(){document.getElementById('freePlanModal').classList.remove('active');document.getElementById('freePlanEmailDiv').classList.remove('hidden');document.getElementById('freePlanResultDiv').classList.add('hidden')}
+function submitFreePlan(){
+  const email=document.getElementById('freePlanEmail').value;
+  const dpa=document.getElementById('freePlanDpa').checked;
+  if(!email||!dpa){alert('Please enter your email and accept the terms.');return}
+  document.getElementById('freePlanEmailDiv').classList.add('hidden');
+  document.getElementById('freePlanResultDiv').classList.remove('hidden');
 }
 
 // Reveal on scroll
