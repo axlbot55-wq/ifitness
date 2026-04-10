@@ -350,6 +350,7 @@ a:hover {
       #chatbox{width:calc(100vw - 1.5rem);right:0.75rem;bottom:5.5rem}
       #chat-fab{bottom:1.2rem;right:1.2rem}
       .ie-grid{grid-template-columns:1fr}
+      #online > div > div:last-child{grid-template-columns:1fr}
     }
       /* MERGED: Modal + Testimonials + Privacy */
 
@@ -387,6 +388,7 @@ a:hover {
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#programs">Programs</a></li>
+    <li><a href="#online">Online</a></li>
     <li><a href="#taekwondo">Taekwondo</a></li>
     <li><a href="#process">How It Works</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -400,6 +402,7 @@ a:hover {
 <div id="mob-nav">
   <a href="#about" onclick="closeMob()">About</a>
   <a href="#programs" onclick="closeMob()">Programs</a>
+  <a href="#online" onclick="closeMob()">Online Programs</a>
   <a href="#taekwondo" onclick="closeMob()">Taekwondo</a>
   <a href="#process" onclick="closeMob()">How It Works</a>
   <a href="#contact" onclick="closeMob()">Contact</a>
@@ -528,6 +531,63 @@ a:hover {
         <div class="pt-divider"></div>
         <p class="pt-desc">The premier package for clients committed to real, lasting results. Maximum sessions, maximum transformation.</p>
         <a href="#contact" class="pt-btn pt-btn-outline" onclick="prefillForm('Personal Training — 24 Sessions')">Start Now →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ ONLINE PROGRAMS ══ -->
+<section id="online" style="background:var(--steel)">
+  <div class="max">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+      <p class="sec-label">Train Anywhere</p>
+      <h2 class="sec-title">Online Programs</h2>
+      <div class="sec-rule" style="margin:0 auto 2rem"></div>
+      <p style="color:var(--muted);font-size:0.88rem;max-width:560px;margin:0 auto;font-weight:300">Can't make it in person? Train with Irish from the comfort of your home — same expertise, same commitment, delivered virtually.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;">
+
+      <!-- Online PT Card -->
+      <div class="pt-card featured reveal" style="border-color:var(--gold-dk);background:linear-gradient(150deg,rgba(200,168,75,0.09),var(--iron));">
+        <div class="pt-ribbon">💻 Virtual</div>
+        <p class="pt-opt">Online Program</p>
+        <p class="pt-name">Online 1-on-1 Physical Training</p>
+        <p class="pt-sublabel">Personalized Virtual Coaching</p>
+        <div class="pt-price" style="font-size:1.6rem;">Via Video Call</div>
+        <div class="pt-price-note">flexible scheduling · anywhere in the world</div>
+        <div class="pt-divider"></div>
+        <p class="pt-desc">Get the same expert 1-on-1 coaching from anywhere. Irish guides you through each exercise live via video call — correcting form, adjusting intensity in real-time, and keeping you accountable. All you need is your phone and a small space.</p>
+        <ul style="list-style:none;margin-bottom:1.5rem;display:flex;flex-direction:column;gap:0.4rem;">
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Live video coaching sessions</li>
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Customized workout programs</li>
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Real-time form correction</li>
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Flexible scheduling</li>
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Minimal to no equipment needed</li>
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Progress tracking & check-ins</li>
+        </ul>
+        <a href="#contact" class="pt-btn pt-btn-gold" onclick="prefillForm('Online 1-on-1 Physical Training')">Inquire Now →</a>
+      </div>
+
+      <!-- Online TKD Card -->
+      <div class="pt-card featured reveal" style="border-color:var(--gold-dk);background:linear-gradient(150deg,rgba(200,168,75,0.09),var(--iron));">
+        <div class="pt-ribbon" style="background:var(--red);color:var(--white)">🥋 Virtual</div>
+        <p class="pt-opt">Online Program</p>
+        <p class="pt-name">Online Taekwondo Training</p>
+        <p class="pt-sublabel">Virtual Martial Arts Coaching</p>
+        <div class="pt-price" style="font-size:1.6rem;">Via Video Call</div>
+        <div class="pt-price-note">kids & adults · learn from home</div>
+        <div class="pt-divider"></div>
+        <p class="pt-desc">Learn Taekwondo from home with a certified Black Belt instructor. Irish conducts live virtual classes — perfect for kids and adults who want discipline, self-defense skills, and fitness without leaving the house. Belt progression included!</p>
+        <ul style="list-style:none;margin-bottom:1.5rem;display:flex;flex-direction:column;gap:0.4rem;">
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Live virtual Taekwondo sessions</li>
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Certified Black Belt instruction</li>
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Kids & adults welcome</li>
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Belt progression pathway</li>
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Poomsae & kicking techniques</li>
+          <li style="font-size:0.78rem;color:var(--light);display:flex;align-items:center;gap:0.5rem;font-weight:300;"><span style="color:var(--gold);font-size:0.65rem;">✓</span> Discipline & focus training</li>
+        </ul>
+        <a href="#contact" class="pt-btn pt-btn-gold" onclick="prefillForm('Online Taekwondo Training')">Inquire Now →</a>
       </div>
 
     </div>
@@ -811,6 +871,8 @@ a:hover {
             <option>Personal Training — 12 Sessions</option>
             <option>Personal Training — 24 Sessions</option>
             <option>Taekwondo Children Home Class</option>
+            <option>Online 1-on-1 Physical Training</option>
+            <option>Online Taekwondo Training</option>
             <option>Free Initial Consultation</option>
           </select>
         </div>
@@ -929,6 +991,8 @@ const chatData={
     program:'Free Initial Consultation',
     next:['Take Me to the Form','Ask Something Else']
   },
+  'Online PT':{msg:"Great choice! 💻 Our Online 1-on-1 Physical Training:\n\n• Live video coaching with Irish\n• Customized programs for any fitness level\n• Real-time form correction\n• Flexible scheduling\n• Minimal equipment needed\n\nFill out the form and we'll get you set up!",program:'Online 1-on-1 Physical Training',next:['Book Free Consultation','More Questions','Go Back']},
+  'Online TKD':{msg:"Awesome! 🥋 Our Online Taekwondo Training:\n\n• Live virtual sessions with a certified Black Belt\n• Kids & adults welcome\n• Belt progression included\n• Poomsae & kicking techniques\n• Discipline & focus training\n\nFill out the inquiry form to get started!",program:'Online Taekwondo Training',next:['Book Free Consultation','More Questions','Go Back']},
   'Other':{msg:"Of course! Feel free to type your question below and Irish will get back to you within 24 hours. ✨",program:'',next:null},
   'WhatsApp': {msg:"Click below to send us a WhatsApp message! We'll reply with the info you need.",action:'whatsapp'},
   'BMI Assessment': {msg:"Let's do a quick BMI check — takes a minute.",action:'bmi'},
@@ -940,7 +1004,7 @@ const chatData={
   'More Questions':{msg:"Sure! Type your question below or scroll up to the Taekwondo section for full details.",program:'',next:null},
   'Ask Something Else':{msg:"Sure! Type your question below and we'll get back to you within 24 hours.",program:'',next:null},
   'Book Now':{msg:"Fill in the inquiry form below and we'll reach out shortly! 💪",program:'Personal Training — 24 Sessions',next:['Got it!']},
-  'Go Back':{msg:"No problem! What else can I help you with?",program:'',next:['Personal Training','Taekwondo for Kids','Pricing & Packages','Free Consultation']},
+  'Go Back':{msg:"No problem! What else can I help you with?",program:'',next:['Personal Training','Taekwondo for Kids','Online PT','Online TKD','Pricing & Packages','Free Consultation']},
   'Got it!':{msg:"You're welcome! We look forward to training with you. 💪",program:'',next:null},
   'Got it, thanks!':{msg:"You're welcome! See you soon. 💪",program:'',next:null},
 };
