@@ -506,12 +506,14 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.5r
           </div>
           <div class="c-item">
             <div class="c-icon">💬</div>
-            <div><div class="c-lbl">WhatsApp</div><div class="c-val"><a href="https://wa.me/639171234567" target="_blank">Chat with Irish</a></div></div>
+            <div><div class="c-lbl">WhatsApp</div><div class="c-val"><a href="https://wa.me/639612071923" target="_blank">+63 961 207 1923</a></div></div>
           </div>
         </div>
       </div>
       <div class="contact-form">
         <h3 class="cf-title">Book a Session</h3>
+        <a href="https://calendly.com/irishchumangit/30min" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:.6rem;background:var(--accent);color:var(--bg);padding:1rem 2rem;border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;margin-bottom:1.5rem;transition:all .3s">📅 Book a Free 30-Min Consultation on Calendly</a>
+        <div style="text-align:center;color:var(--muted);font-size:.75rem;margin-bottom:1.5rem;letter-spacing:.05em">— or send an inquiry below —</div>
         <form action="https://formspree.io/f/xgoppegp" method="POST">
           <div class="cf-row">
             <div class="cf-group"><label>First Name</label><input type="text" name="firstName" placeholder="Your first name" required></div>
@@ -623,7 +625,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.5r
   </div>
 </div>
 
-<a href="https://wa.me/639171234567" target="_blank" class="whatsapp-fab" aria-label="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/639612071923" target="_blank" class="whatsapp-fab" aria-label="Chat on WhatsApp">💬</a>
 
 <script>
 // Nav scroll
@@ -655,10 +657,10 @@ function chatAction(type){
   const body=document.getElementById('cbBody');
   const opts=document.getElementById('cbOptions');
   let msg='';
-  if(type==='whatsapp'){msg='Opening WhatsApp...';setTimeout(()=>{window.open('https://wa.me/639171234567','_blank')},500)}
+  if(type==='whatsapp'){msg='Opening WhatsApp...';setTimeout(()=>{window.open('https://wa.me/639612071923','_blank')},500)}
   else if(type==='bmi'){msg='Let me open the BMI calculator...';setTimeout(()=>{openBmiModal();opts.style.display='none'},500)}
   else if(type==='plan'){msg='Let me get you that free plan...';setTimeout(()=>{openFreePlanModal();opts.style.display='none'},500)}
-  else if(type==='book'){msg='Scrolling to the booking form...';setTimeout(()=>{document.getElementById('contact').scrollIntoView({behavior:'smooth'})},500)}
+  else if(type==='book'){msg='Opening Calendly to book a session...';setTimeout(()=>{window.open('https://calendly.com/irishchumangit/30min','_blank')},500)}
   const userDiv=document.createElement('div');userDiv.className='cb-msg user-msg';
   const btnText={whatsapp:'Chat on WhatsApp',bmi:'BMI Assessment',plan:'Free 7-Day Plan',book:'Book a Session'};
   userDiv.textContent=btnText[type]||type;
